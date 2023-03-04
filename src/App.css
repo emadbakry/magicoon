@@ -263,6 +263,9 @@ body {
     top: 0;
     opacity: 1;
   }
+  .nav--links li {
+    @apply w-[90%] rounded-sm hover:bg-clr_white_gray;
+  }
   .nav--links a {
     padding: 0.4rem 0;
     min-width: 80px;
