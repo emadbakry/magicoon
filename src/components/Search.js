@@ -26,6 +26,7 @@ export default function SearchSec(props) {
       // } else if (srchSec.getBoundingClientRect().top >= 80) {
       //   document.body.classList.remove("active_sticky_mob");
       // }
+      // hiiii
     });
   }
   return (
