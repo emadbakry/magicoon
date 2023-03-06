@@ -16,6 +16,7 @@ export default function Btn(props) {
     <>
       {props.useAnchor ? (
         <a
+          className="block"
           download={props.iconName}
           href={`data:image/svg+xml,${encodeURIComponent(props.href)}`}
         >

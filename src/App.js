@@ -34,7 +34,7 @@ function App() {
     // force input to trigger, to do filtering when filter type changes
     document
       .getElementById("main-search_btn")
-      .dispatchEvent(new Event("input", { bubbles: true }));
+      .dispatchEvent(new Event("input", ~{ bubbles: true }));
   }
 
   // for search sec

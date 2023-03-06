@@ -449,7 +449,7 @@ body {
     display: none;
   }
   .popup_result--download_btns > a {
-    padding: 3vw 2vw;
+    padding: 0 !important;
   }
 }
 @media only screen and (max-width: 492px) {
