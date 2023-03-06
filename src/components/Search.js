@@ -48,7 +48,7 @@ export default function SearchSec(props) {
             <input
               id="main-search_btn"
               onInput={props.filterFunc}
-              className="w-full h-full text-primary bg-[#ffffff] font-bold indent-8 pl-8 border-[3px] rounded-lg placeholder:text-clr_gray_dark focus-visible:outline-primary"
+              className="w-full h-full text-primary bg-[#ffffff] font-bold indent-8 pl-8 border-[3px] rounded-lg placeholder:text-clr_gray_dark focus-visible:border-primary focus-visible:outline-none"
               type="text"
               placeholder="Search 288 icons..."
             />
@@ -61,7 +61,7 @@ export default function SearchSec(props) {
           </div>
           <div className="search_options flex flex-wrap justify-between gap-4">
             <div className="icons_filter_type">
-              <ul className="flex bg-clr_gray rounded-lg overflow-hidden border-[1px] border-clr_white_gray">
+              <ul className="flex bg-clr_gray rounded-lg overflow-hidden">
                 <li
                   onClick={props.setIconFilterType}
                   className="option_all cursor-pointer type_active w-12 flex items-center justify-center text-xs font-bold"

@@ -17,8 +17,8 @@ export default function Brief() {
     <>
       <section className="brief relative py-[88px]">
         <div className="my_container">
-          <div className="row brief--content flex justify-between flex-wrap">
-            <div className="brief--content--text max-w-2xl pr-16">
+          <div className="row brief--content flex justify-between flex-wrap items-start md:flex-nowrap">
+            <div className="brief--content--text max-w-2xl pr-8">
               <h1 className="font-extrabold text-5xl text-primary mb-4 leading-[59.5px]">
                 Free UI Icons Library
               </h1>

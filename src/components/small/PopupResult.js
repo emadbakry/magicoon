@@ -81,7 +81,7 @@ export default function PopupResult(props) {
     );
     navigator.clipboard.writeText(svg_path.innerHTML);
     // sucess msg
-    success_copyMsg("Copied to Clipboard successfully");
+    success_copyMsg("Copied");
   }
   const [iconToDownload, setIconToDownload] = React.useState(" ");
   function download_svg(e) {
@@ -139,7 +139,7 @@ export default function PopupResult(props) {
                             /> */}
                             {props.iconSelected}
                           </i>
-                          <p className="absolute font-bold uppercase bottom-4 left-1/2 -translate-x-1/2">
+                          <p className="absolute text-sm tracking-wide font-bold uppercase bottom-4 left-1/2 -translate-x-1/2">
                             {props.type}
                           </p>
                         </div>
@@ -189,18 +189,17 @@ export default function PopupResult(props) {
         <div
           onClick={closePop}
           className="popup_result--overlay fixed z-10 bg-[#25314c3d] m-auto w-screen h-screen top-0 opacity-20 left-0"
-        >
-          <div className="success_msg">
-            <div className="text">
-              {succesMsg}{" "}
-              <img
-                className="w-6 inline-block"
-                src={icon_correct}
-                alt="icon_correct"
-              />
-            </div>
-            <div className="progressBar"></div>
+        ></div>
+        <div className="success_msg">
+          <div className="text">
+            {succesMsg}{" "}
+            <img
+              className="w-6 inline-block"
+              src={icon_correct}
+              alt="icon_correct"
+            />
           </div>
+          <div className="progressBar hidden"></div>
         </div>
       </div>
     </>

@@ -1,6 +1,7 @@
 /* By Emadcode.com */
 /* this styles were relied on desktop-first princible */
 /* hey! */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -80,7 +81,7 @@ body {
   transition: 0.1s;
 } */
 .icons_filter_type .option {
-  @apply py-3 cursor-pointer border-y-0 border w-[120px] border-x-clr_white_gray flex items-center justify-center text-xs font-bold uppercase;
+  @apply py-3 cursor-pointer border-l-[1px] w-[120px] border-x-clr_white_gray flex items-center justify-center text-xs font-bold uppercase;
 }
 .icons_filter_type .option span {
   @apply ml-2 block;
@@ -193,7 +194,7 @@ body {
   transition: all 0.4s;
 }
 .success_msg .text {
-  @apply text-primary bg-clr_white_gray py-2 px-4 font-bold;
+  @apply text-clr_white_1 bg-clr_green_red py-2 px-4 font-bold;
 }
 .success_msg .progressBar {
   @apply w-[10%] bg-clr_green_red h-1;
@@ -210,8 +211,8 @@ body {
 /* popup */
 /* styles for medium screen devices */
 @media only screen and (max-width: 1300px) {
-  .brief--content--text {
-    padding: 0;
+  .brief--content--text h1 {
+    font-size: 2rem;
   }
   .brief--content--text p {
     margin-bottom: 1rem;
@@ -285,7 +286,7 @@ body {
     padding-bottom: 2rem;
   }
   .brief--content--text h1 {
-    font-size: 2.6rem;
+    font-size: 1.5rem;
   }
   .brief--content--more {
     margin: auto;
@@ -373,23 +374,24 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    display: none;
   }
   .select_premium {
     margin-left: unset;
     transition: 0.2s 0.3s;
     max-height: 200px;
   }
-  /* .active_sticky .search_sec {
-    z-index: 30;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-  } */
+  .search_sec {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
   /* .active_sticky_mob .search_sec {
     z-index: 30;
     box-shadow: 0px 8px 20px rgba(139, 151, 180, 0.12);
     padding-top: 0.5rem;
     padding-bottom: 0.2rem;
   } */
+
   .select_clr {
     height: auto;
     margin-bottom: 0.5rem;
@@ -456,9 +458,9 @@ body {
   }
   /* popup sucess msg */
   .success_msg {
-    left: 5vw;
+    /* left: 5vw;
     top: unset;
-    bottom: 15vw;
+    bottom: 15vw; */
   }
   /* popup sucess msg */
 }
