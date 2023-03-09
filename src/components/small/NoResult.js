@@ -15,7 +15,7 @@ export default function NoResult(props) {
             <h3 className="text-xl text-primary font-bold mt-4 mx-4">
               No results found for “{props.term}”
             </h3>
-            <p className="font-medium leading-5 mx-auto px-4 max-w-[453px] pb-14 mt-3 text-clr_gray_dark">
+            <p className="font-medium leading-5 mx-auto px-6 max-w-[453px] pb-14 mt-3 text-clr_gray_dark">
               If you can't find what you're looking for, retype another keyword
               for the icon you're looking for.
             </p>

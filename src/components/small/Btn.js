@@ -3,7 +3,7 @@ export default function Btn(props) {
     <>
       <div
         onClick={props.func}
-        className={`${props.styles} ${props.bg} py-3 px-5 cursor-pointer hover:scale-90 transition`}
+        className={`${props.styles} ${props.bg} py-3 px-5 cursor-pointer`}
       >
         <i>
           <img src={props.icon} alt={props.alt || "icon"} />

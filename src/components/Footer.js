@@ -100,7 +100,7 @@ export default function Footer() {
           </div>
           <div className="footer--line bg-clr_white_gray w-full h-[1px]"></div>
           <div className="footer--bottom flex items-center justify-between mt-6 pb-10">
-            <div className="rights">
+            <div className="rights text-sm">
               <div>
                 <span className="font-bold text-primary block">
                   © 2023 magicoon. All Rights Reserved
@@ -110,7 +110,9 @@ export default function Footer() {
             </div>
             <div className="made_in">
               <div className="text-sm">
-                <span className="block uppercase">Made in Algeria</span>
+                <span className="block uppercase font-bold text-sm">
+                  Made in Algeria
+                </span>
                 <span>By</span>
                 <span className="text-clr_blue_2 font-bold ml-2 inline-block hover:text-primary cursor-pointer">
                   Seyfeddine B.

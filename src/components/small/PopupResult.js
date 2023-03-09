@@ -71,7 +71,7 @@ export default function PopupResult(props) {
       setTimeout(() => {
         body.classList.remove("show_msg");
         canExcute = true;
-      }, 3000);
+      }, 1500);
     }
   }
   // temporarily

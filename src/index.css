@@ -209,7 +209,6 @@ body {
 .popup_result--icon .icon {
   position: relative;
   display: flex;
-  cursor: pointer;
   align-items: center;
   justify-content: center;
   border-radius: 1rem;
@@ -643,9 +642,9 @@ body {
   /* popup */
 
   .popup_result > .Mycont {
-    max-width: 60vw;
-    flex-wrap: nowrap;
-    flex-direction: column;
+    /* max-width: 60vw; */
+    /* flex-wrap: nowrap; */
+    /* flex-direction: column; */
   }
 
   .popup_result--icon {
@@ -660,16 +659,16 @@ body {
 
   .popup_result--download_icon > .row {
     flex-wrap: nowrap;
-    flex-direction: column;
+    /* flex-direction: column; */
   }
 
   .popup_result--brief_more {
     display: none;
   }
 
-  .popup_result .footer--line {
+  /* .popup_result .footer--line {
     display: none;
-  }
+  } */
 
   /* .popup_result--download_btns > a {
     padding: 3vw 2vw;

@@ -98,7 +98,10 @@ body {
   @apply block;
 }
 .icons_filter_type ul li.type_active {
-  @apply bg-clr_blue_2 text-clr_white_1;
+  @apply text-clr_white_1;
+  background: linear-gradient(to right, #396ce8, #396ce8);
+  background-origin: border-box;
+  border-color: transparent;
 }
 /* .icons_filter_type ul .option.type_active img {
   @apply invert;
@@ -107,7 +110,7 @@ body {
 /* results grid */
 .my_result_items {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(135px, 1fr));
 }
 /* results grid */
 #popup_result {
@@ -124,7 +127,7 @@ body {
 }
 .icons_results .icon,
 .popup_result--icon .icon {
-  @apply relative rounded-2xl pt-[100%] flex items-center justify-center bg-clr_white_1 cursor-pointer hover:bg-clr_gray;
+  @apply relative rounded-2xl pt-[100%] flex items-center justify-center bg-clr_white_1 hover:bg-clr_gray;
 }
 .popup_result--icon .icon .icon_content,
 .icons_results .icon .icon_content {
@@ -186,12 +189,14 @@ body {
 /* popup success msg */
 .success_msg {
   position: fixed;
-  left: 10vw;
+  left: 50%;
   top: 6vw;
   z-index: 120;
   visibility: hidden;
   opacity: 0;
   transition: all 0.4s;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 .success_msg .text {
   @apply text-clr_white_1 bg-clr_green_red py-2 px-4 font-bold;
@@ -211,9 +216,9 @@ body {
 /* popup */
 /* styles for medium screen devices */
 @media only screen and (max-width: 1300px) {
-  .brief--content--text h1 {
+  /* .brief--content--text h1 {
     font-size: 2rem;
-  }
+  } */
   .brief--content--text p {
     margin-bottom: 1rem;
   }
@@ -285,18 +290,23 @@ body {
     padding-right: unset;
     padding-bottom: 2rem;
   }
-  .brief--content--text h1 {
+  /* .brief--content--text h1 {
     font-size: 1.5rem;
-  }
+  } */
   .brief--content--more {
     margin: auto;
   }
   .brief--download {
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
   }
   .brief--download--figma_file {
     margin: unset;
+    margin-left: 0.75rem;
+  }
+  .brief--download--all_btn {
+    margin: unset;
+    margin-right: 0.75rem;
   }
   .brief--download--btn_inside,
   .brief--download--figma_file {
@@ -349,7 +359,7 @@ body {
   }
   .icons_filter_type .option {
     width: auto;
-    padding: 3vw 1.7vw;
+    padding: 3.5vw 1.7vw;
   }
   .icons_filter_type .option span {
     margin-left: 0px;
@@ -381,10 +391,10 @@ body {
     transition: 0.2s 0.3s;
     max-height: 200px;
   }
-  .search_sec {
+  /* .search_sec {
     padding-top: 1rem;
     padding-bottom: 1rem;
-  }
+  } */
   /* .active_sticky_mob .search_sec {
     z-index: 30;
     box-shadow: 0px 8px 20px rgba(139, 151, 180, 0.12);
@@ -410,8 +420,13 @@ body {
   }
   .footer--top {
     flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     margin-bottom: 1rem;
+  }
+  .footer--bottom .made_in {
+    margin-top: 1rem;
   }
   .footer--top > div {
     width: 100%;
@@ -419,42 +434,66 @@ body {
     margin-bottom: 2rem;
   }
   .footer--top .footer--title {
-    margin-bottom: 0.4rem;
+    /* margin-bottom: 0.4rem; */
   }
   .footer--bottom {
     flex-direction: column;
   }
-  /* popup */
-  .popup_result > .Mycont {
-    max-width: 60vw;
-    flex-wrap: nowrap;
-    flex-direction: column;
+  .footer--links {
+    grid-template-columns: 1fr;
   }
+  .footer--links > li {
+    justify-content: center;
+  }
+  .footer--links > li > a {
+    min-width: 80px;
+  }
+  .footer--top .over-view,
+  .footer--top .contact-us {
+    max-width: unset;
+  }
+  /* popup */
+
+  .popup_result--main {
+    padding: 1rem;
+  }
+
+  .popup_result--download_btns > a {
+    padding: 0 !important;
+  }
+}
+@media only screen and (max-width: 550px) {
   .popup_result--icon {
     max-width: 100%;
     margin: 0 auto 0.8rem;
     width: 40vw;
   }
-  .popup_result--main {
-    padding: 1rem;
-  }
   .popup_result--download_icon > .row {
     flex-wrap: nowrap;
     flex-direction: column;
   }
-  .popup_result--brief_more {
-    display: none;
+  .popup_result > .Mycont {
+    max-width: 85vw;
+    flex-wrap: nowrap;
+    flex-direction: column;
   }
-  .popup_result .footer--line {
-    display: none;
+  .brief--content--more {
+    min-width: unset;
   }
-  .popup_result--download_btns > a {
-    padding: 0 !important;
+  .more_bg_gradient {
+    width: 100%;
+    min-width: 130px;
   }
 }
 @media only screen and (max-width: 492px) {
   .popup_result--download_icon > .row {
     @apply flex-wrap;
+  }
+  .brief--download--figma_file {
+    margin: 0px 0.4rem;
+  }
+  .brief--download--all_btn {
+    margin: 0px 0.4rem;
   }
   /* popup sucess msg */
   .success_msg {
@@ -464,7 +503,7 @@ body {
   }
   /* popup sucess msg */
 }
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 400px) {
   .brief--download {
     flex-direction: column-reverse;
     padding: 0 3rem;
@@ -474,5 +513,12 @@ body {
   }
   .brief--download--all_btn {
     margin-top: 1rem;
+  }
+}
+
+@media only screen and (max-width: 370px) {
+  .more_bg_gradient {
+    width: 100%;
+    min-width: 100px;
   }
 }
