@@ -85,7 +85,7 @@ body.popup_active {
   transition: 0.1s;
 } */
 .icons_filter_type .option {
-  @apply py-3 cursor-pointer border-l-[1px] w-[120px] border-x-clr_white_gray flex items-center justify-center text-xs font-bold uppercase;
+  @apply py-3 cursor-pointer border-l-[0px] border-y-[1px] w-[120px] border-l-clr_white_gray flex items-center justify-center text-xs font-bold uppercase;
 }
 .icons_filter_type .option span {
   @apply ml-2 block;
@@ -364,7 +364,7 @@ body.popup_active {
   } */
   .icons_filter_type .option_all {
     width: auto;
-    padding: 3vw;
+    padding: 1rem;
   }
   .icons_filter_type li img {
     display: none;
@@ -373,7 +373,7 @@ body.popup_active {
   }
   .icons_filter_type .option {
     width: auto;
-    padding: 3.5vw 1.7vw;
+    /* padding: 3.5vw 1.7vw; */
   }
   .icons_filter_type .option span {
     margin-left: 0px;

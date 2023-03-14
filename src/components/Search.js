@@ -64,7 +64,7 @@ export default function SearchSec(props) {
               <ul className="flex bg-clr_gray rounded-lg overflow-hidden">
                 <li
                   onClick={props.setIconFilterType}
-                  className="option_all cursor-pointer type_active w-12 flex items-center justify-center text-xs font-bold"
+                  className="option_all border-[1px] cursor-pointer type_active w-12 flex items-center justify-center text-xs font-bold"
                 >
                   <span className="filterTypeSpan">All</span>
                 </li>

@@ -34,9 +34,9 @@ export default function Footer() {
                 </li>
               </ul>
             </div>
-            <div className="social-media max-w-[300px] relative xl:-left-10">
+            <div className="social-media max-w-[300px] relative">
               <h3 className="footer--title">Social media</h3>
-              <ul className="grid footer--links grid-cols-2 gap-x-32 gap-y-3">
+              <ul className="grid footer--links grid-cols-2 gap-x-[5vw] gap-y-3">
                 <li>
                   <i>
                     <img src={icon_twitter} alt="twitter_icon" />
