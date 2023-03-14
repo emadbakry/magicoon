@@ -535,3 +535,33 @@ body {
     min-width: 100px;
   }
 }
+@media only screen and (min-width: 1800px) {
+  .my_result_items {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+  .my_result_items .icon svg {
+    min-width: 60px;
+    min-height: 60px;
+    max-width: 100%;
+  }
+  .icons_results .icon .icon_content p {
+    font-size: 1rem;
+  }
+}
+@media only screen and (min-width: 2400px) {
+  .my_result_items {
+    grid-template-columns: repeat(auto-fill, minmax(10vw, 1fr));
+    gap: 2vw;
+  }
+  .my_result_items .icon_content p {
+    top: 75%;
+  }
+  .my_result_items .icon svg {
+    min-width: 4vw;
+    min-height: 4vw;
+    max-width: 100%;
+  }
+  .icons_results .icon .icon_content p {
+    font-size: 1vw;
+  }
+}
