@@ -6,9 +6,10 @@ function ResultsIcons(props) {
       <>
         <div
           onClick={props.clickFunc}
+          ئئ
           data-id={props.id}
           data-type={props.type}
-          className={`icon ${props.styles}`}
+          className={`icon cursor-pointer ${props.styles}`}
         >
           <div className="icon_content relative w-full h-full pb-9 pt-2 px-4 justify-center items-center">
             <i>

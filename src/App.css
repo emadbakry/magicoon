@@ -244,7 +244,17 @@ body {
   }
   .footer--top {
     gap: 15px;
-    margin-bottom: 1.7rem;
+    /* margin-bottom: 1.7rem; */
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .footer--top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem 5rem;
+  }
+  .footer--links {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -455,7 +465,7 @@ body {
   /* popup */
 
   .popup_result--main {
-    padding: 1rem;
+    padding: 2rem;
   }
 
   .popup_result--download_btns > a {
@@ -463,6 +473,9 @@ body {
   }
 }
 @media only screen and (max-width: 550px) {
+  .popup_result--main {
+    padding: 1rem;
+  }
   .popup_result--icon {
     max-width: 100%;
     margin: 0 auto 0.8rem;
@@ -517,7 +530,7 @@ body {
 }
 
 @media only screen and (max-width: 370px) {
-  .more_bg_gradient {
+  .popup_result--main .more_bg_gradient {
     width: 100%;
     min-width: 100px;
   }

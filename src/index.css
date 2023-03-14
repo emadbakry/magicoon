@@ -649,7 +649,7 @@ body {
 
   .popup_result--icon {
     max-width: 100%;
-    margin: 0 auto 0.8rem;
+    /* margin: 0 auto 0.8rem; */
     width: 40vw;
   }
 

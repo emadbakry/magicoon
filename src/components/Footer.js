@@ -76,7 +76,7 @@ export default function Footer() {
               </ul>
             </div>
             <div className="contact-us max-w-[285px]">
-              <h3 className="footer--title">Overview</h3>
+              <h3 className="footer--title">Contact Us</h3>
               <p className="text-sm leading-6">
                 If you need any help or you have an enquiry, our direct message
                 box is at your disposal.
