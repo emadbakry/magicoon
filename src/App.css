@@ -12,8 +12,12 @@ body {
 .my_container {
   padding-left: 128px;
   padding-right: 128px;
+  max-width: 1600px;
+  margin: auto;
 }
-
+body.popup_active {
+  overflow-y: hidden;
+}
 .more_bg_gradient {
   background: linear-gradient(239.58deg, #c76ec4 -14%, #396ce8 114.09%);
   background-position: center;
@@ -247,7 +251,7 @@ body {
     /* margin-bottom: 1.7rem; */
   }
 }
-@media only screen and (min-width: 768px) and (max-width: 1200px) {
+@media only screen and (min-width: 768px) and (max-width: 1280px) {
   .footer--top {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -535,7 +539,7 @@ body {
     min-width: 100px;
   }
 }
-@media only screen and (min-width: 1800px) {
+/* @media only screen and (min-width: 1800px) {
   .my_result_items {
     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   }
@@ -547,11 +551,11 @@ body {
   .icons_results .icon .icon_content p {
     font-size: 1rem;
   }
-}
-@media only screen and (min-width: 2400px) {
+} */
+/* @media only screen and (min-width: 2400px) {
   .my_result_items {
     grid-template-columns: repeat(auto-fill, minmax(10vw, 1fr));
-    gap: 2vw;
+    gap: 1.5vw;
   }
   .my_result_items .icon_content p {
     top: 75%;
@@ -563,5 +567,11 @@ body {
   }
   .icons_results .icon .icon_content p {
     font-size: 1vw;
+  }
+} */
+
+@media only screen and (max-width: 320px) {
+  .my_result_items {
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
   }
 }
