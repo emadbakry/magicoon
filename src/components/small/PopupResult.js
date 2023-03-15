@@ -81,7 +81,7 @@ export default function PopupResult(props) {
     );
     navigator.clipboard.writeText(svg_path.innerHTML);
     // sucess msg
-    success_copyMsg("Copied");
+    success_copyMsg("Copied!");
   }
   const [iconToDownload, setIconToDownload] = React.useState(" ");
   function download_svg(e) {
@@ -90,7 +90,7 @@ export default function PopupResult(props) {
     );
     // svg_path.innerHTML;
     // sucess msg
-    success_copyMsg("Copied to Clipboard successfully");
+    success_copyMsg("Downloading...");
   }
   return (
     <>
@@ -191,7 +191,7 @@ export default function PopupResult(props) {
           className="popup_result--overlay fixed z-10 bg-[#25314c3d] m-auto w-screen h-screen top-0 opacity-20 left-0"
         ></div>
         <div className="success_msg">
-          <div className="text">
+          <div className="text rounded-md">
             {succesMsg}{" "}
             <img
               className="w-6 inline-block"

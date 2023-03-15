@@ -49,7 +49,7 @@ export default function Footer() {
                   </i>
                   <a href="/">Behance</a>
                 </li>
-                <li>
+                <li className="min-w-[6.5rem]">
                   <i>
                     <img src={icon_insta} alt="Insta_icon" />
                   </i>
