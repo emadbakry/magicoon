@@ -85,10 +85,16 @@ export default function PopupResult(props) {
   }
   const [iconToDownload, setIconToDownload] = React.useState(" ");
   function download_svg(e) {
-    let svg_path = document.querySelector(
-      ".popup_result--icon .icon_content i"
-    );
-    // svg_path.innerHTML;
+    const svg = document.querySelector(`.popup_result--icon .icon_content i`)
+      .innerHTML;
+    let iconName = document.querySelector(".popup_result--icon_title")
+      .textContent;
+    const blob = new Blob([svg.toString()]);
+    const tempoElement = document.createElement("a");
+    tempoElement.download = `${iconName}-.svg`;
+    tempoElement.href = window.URL.createObjectURL(blob);
+    tempoElement.click();
+    tempoElement.remove();
     // sucess msg
     success_copyMsg("Downloading...");
   }

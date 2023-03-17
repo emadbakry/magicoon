@@ -12,19 +12,21 @@ export default function Btn(props) {
       </div>
     </>
   );
-  return (
-    <>
-      {props.useAnchor ? (
-        <a
-          className="block"
-          download={props.iconName}
-          href={`data:image/svg+xml,${encodeURIComponent(props.href)}`}
-        >
-          {content}
-        </a>
-      ) : (
-        <div> {content}</div>
-      )}
-    </>
-  );
+  return content;
+  // code below is an old way to do downloading function
+  // return (
+  //   <>
+  //     {props.useAnchor ? (
+  //       <a
+  //         className="block"
+  //         download={props.iconName}
+  //         href={`data:image/svg+xml,${encodeURIComponent(props.href)}`}
+  //       >
+  //         {content}
+  //       </a>
+  //     ) : (
+  //       <div> {content}</div>
+  //     )}
+  //   </>
+  // );
 }
