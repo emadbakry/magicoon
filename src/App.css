@@ -15,9 +15,9 @@ body {
   max-width: 1600px;
   margin: auto;
 }
-body.popup_active {
+/* body.popup_active {
   overflow-y: hidden;
-}
+} */
 .more_bg_gradient {
   background: linear-gradient(239.58deg, #c76ec4 -14%, #396ce8 114.09%);
   background-position: center;
@@ -357,6 +357,7 @@ body.popup_active {
     border-radius: 8px;
     font-size: 1.5rem;
   }*/
+  /* ,,, */
   /* test */
   /* .active_sticky .search_sec {
     padding-top: 0.5rem;
@@ -475,6 +476,15 @@ body.popup_active {
   .popup_result--download_btns > a {
     padding: 0 !important;
   }
+}
+/* make popup scrollable y */
+.popup_result--main {
+  overflow-y: scroll;
+  max-height: 77vh;
+}
+.popup_result--main::-webkit-scrollbar {
+  width: 0 !important;
+  /* display: none; */
 }
 @media only screen and (max-width: 550px) {
   .popup_result--main {
