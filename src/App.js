@@ -21,7 +21,8 @@ function App() {
     }
   }
   // filter icons type
-  let filterType = "all";
+  // let filterType = "all";
+  const [filterType, setFilterType] = React.useState("all");
   function setIconFilterType(e) {
     let IconTypes_list = document.querySelectorAll(".icons_filter_type ul li");
     IconTypes_list.forEach((e) => e.classList.remove("type_active"));
@@ -30,11 +31,17 @@ function App() {
       .textContent;
     // console.log(e.currentTarget.querySelector(".filterTypeSpan"));
     // console.log(`Filter type  : ${typeOfFilter}`);
-    filterType = typeOfFilter;
+    setFilterType(typeOfFilter);
     // force input to trigger, to do filtering when filter type changes
     document
       .getElementById("main-search_btn")
-      .dispatchEvent(new Event("input", ~{ bubbles: true }));
+      .dispatchEvent(new Event("input", { bubbles: true }));
+    // console.log(document.getElementById("main-search_btn").value);
+    setTimeout(() => {
+      document
+        .getElementById("main-search_btn")
+        .dispatchEvent(new Event("input", { bubbles: true }));
+    }, 0);
   }
 
   // for search sec
@@ -44,7 +51,7 @@ function App() {
   const [term, setTerm] = React.useState("icon");
   function filtering(e) {
     let value = e.currentTarget.value.toLowerCase();
-    console.log(value);
+    // console.log(value);
     setTerm(value);
     // if value == back, just cancel filtering and show normal results
 
@@ -65,13 +72,15 @@ function App() {
           filterType.toLowerCase() === "all" ||
           icon.type.toLowerCase() === filterType.toLowerCase()
         ) {
+          // console.log(icon.type);
+          // console.log(filterType);
           data_matched.push(icon.id);
         }
       }
     });
     let path_matched = Data.svgs.filter((i) => data_matched.includes(i.id));
     if (Array.isArray(path_matched) && path_matched.length > 0) {
-      console.log(path_matched);
+      // console.log(path_matched);
       SetFilterData(path_matched);
     } else {
       SetFilterData("no-match");
@@ -83,7 +92,7 @@ function App() {
     } else {
       setIsVisible("visible");
     }
-  }
+  } // End filtering function
   function cleanInput() {
     document.getElementById("main-search_btn").value = "";
     // force input to trigger, to do filtering when cleaning input

@@ -6,7 +6,6 @@ function ResultsIcons(props) {
       <>
         <div
           onClick={props.clickFunc}
-          ئئ
           data-id={props.id}
           data-type={props.type}
           className={`icon cursor-pointer ${props.styles}`}
@@ -36,6 +35,8 @@ function ResultsIcons(props) {
       setIsReady(false);
     }, 2000);
     setIconName(e.currentTarget.querySelector("p").textContent);
+    // console.log(e.currentTarget.dataset.id);
+    // console.log(props.data);
     setIconType(props.data[e.currentTarget.dataset.id].type);
     setPopIcon(props.data[e.currentTarget.dataset.id].path);
     setPopIconName(props.data[e.currentTarget.dataset.id].name);
@@ -43,6 +44,7 @@ function ResultsIcons(props) {
   }
   function HandleResults() {
     let data_to_result = props.data;
+    let counterForIcons = 0;
     const finalResult = data_to_result.map((i) => {
       return (
         <Icon
@@ -50,7 +52,7 @@ function ResultsIcons(props) {
           txt={i.name}
           type={i.type}
           key={i.id}
-          id={i.id}
+          id={counterForIcons++}
           icon={i.path}
         />
       );
