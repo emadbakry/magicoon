@@ -8,7 +8,7 @@ export const Data = {
       name: "figma",
       id: 0,
       type: "light",
-      keywords: ["", "figma", "psd"],
+      keywords: ["", "figma", "psd", "XD"],
       path: (
         <svg
           viewBox="0 0 24 24"
@@ -48,7 +48,16 @@ export const Data = {
       name: "shopping-basket",
       id: 1,
       type: "regular",
-      keywords: ["", "chat-dots", "three", "talking", "call", "chat", "dots"],
+      keywords: [
+        "",
+        "shopping-basket",
+        "chat-dots",
+        "three",
+        "talking",
+        "call",
+        "chat",
+        "dots",
+      ],
       path: (
         <svg
           width="40"
@@ -68,7 +77,16 @@ export const Data = {
       name: "shopping-basket",
       id: 2,
       type: "light",
-      keywords: ["", "chat-dots", "three", "talking", "call", "chat", "dots"],
+      keywords: [
+        "",
+        "chat-dots",
+        "three",
+        "talking",
+        "call",
+        "chat",
+        "dots",
+        "shopping-basket",
+      ],
       path: (
         <svg
           width="40"
@@ -90,6 +108,7 @@ export const Data = {
       type: "filled",
       keywords: [
         "",
+        "shopping-basket",
         "shop",
         "shopping",
         "cart",
@@ -118,7 +137,7 @@ export const Data = {
       name: "download",
       id: 4,
       type: "regular",
-      keywords: ["", "download", "upload", "arrow", "package"],
+      keywords: ["", "download", "upload", "arrow", "package", "down"],
       path: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -139,7 +158,7 @@ export const Data = {
       name: "arrow-down",
       id: 5,
       type: "regular",
-      keywords: ["", "download", "upload", "arrow", "package"],
+      keywords: ["", "arrow-down", "download", "upload", "arrow", "package"],
       path: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -160,7 +179,15 @@ export const Data = {
       name: "arrow-down-left",
       id: 6,
       type: "regular",
-      keywords: ["", "down left", "download", "upload", "arrow", "package"],
+      keywords: [
+        "",
+        "arrow-down-left",
+        "down left",
+        "download",
+        "upload",
+        "arrow",
+        "package",
+      ],
       path: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
