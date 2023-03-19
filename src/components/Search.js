@@ -36,7 +36,7 @@ export default function SearchSec(props) {
         id="search_sec"
         className="search_sec py-8 z-[9] bg-clr_white_1 sticky top-0"
       >
-        <style>{`.icon_content i * {fill: ${props.color};}`}</style>
+        <style>{`.icon_content i path {fill: ${props.color};}`}</style>
         <div className="my_container">
           <div className="search_btn mb-4 w-full border-clr_white_gray h-16 flex items-center relative">
             <label

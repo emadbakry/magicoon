@@ -119,7 +119,7 @@ function App() {
       {filterData === "no-match" ? (
         <NoResult term={term} />
       ) : (
-        <ResultsIcons data={filterData} />
+        <ResultsIcons color={color} data={filterData} />
       )}
       <Footer />
       {/* <PopupResult /> */}

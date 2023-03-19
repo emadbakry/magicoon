@@ -94,6 +94,7 @@ function ResultsIcons(props) {
               iconSelected={PopIcon}
               iconSelectedName={PopIconName}
               type={iconType}
+              color={props.color}
             />
           }
         </>

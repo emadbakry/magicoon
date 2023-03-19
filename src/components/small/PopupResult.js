@@ -49,8 +49,15 @@ export default function PopupResult(props) {
     // sucess msg
     success_copyMsg("Copied!");
   }
-  const [iconToDownload, setIconToDownload] = React.useState(" ");
+  // const [iconToDownload, setIconToDownload] = React.useState(" ");
   function download_svg(e) {
+    let colorSelected = props.color;
+
+    let svgPaths = document.querySelectorAll(
+      ".popup_result--icon .icon_content svg path"
+    );
+    svgPaths.forEach((path) => path.setAttribute("fill", colorSelected));
+
     const svg = document.querySelector(`.popup_result--icon .icon_content i`)
       .innerHTML;
     let iconName = document.querySelector(".popup_result--icon_title")
@@ -128,7 +135,6 @@ export default function PopupResult(props) {
                       txtContent={"Download SVG"}
                       func={download_svg}
                       useAnchor={true}
-                      href={iconToDownload}
                       iconName={props.iconSelectedName}
                     />
                     <Btn
